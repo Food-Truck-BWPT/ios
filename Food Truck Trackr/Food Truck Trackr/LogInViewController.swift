@@ -9,47 +9,45 @@
 import UIKit
 import MapKit
 
-class LogInViewController: UIViewController {
+class LogInViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet weak var backgroundMap: MKMapView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var signUpSignInSegmentedControl: UISegmentedControl!
+    @IBOutlet weak var signUpLoginSegmentedControl: UISegmentedControl!
     @IBOutlet weak var signUpSignInButton: UIButton!
+    
+    var locationManager: CLLocationManager!
+    
+    // Initial locations
+    var userCurrentLocation: CLLocation = CLLocation(latitude: 0,
+                                                     longitude: 0)
+    
+    var userLatitude: Double = 0
+    var userLongitude: Double = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        determineMyCurrentLocation()
         setUpMap()
         setUpUserInterface()
     }
     
     func setUpMap() {
-
-        let exampleLocation = CLLocation(latitude: 37.7749295, longitude: -122.4194155)
-        let zoomRange = MKMapView.CameraZoomRange(maxCenterCoordinateDistance: 400000)
-        let region = MKCoordinateRegion(center: exampleLocation.coordinate,
-                                        latitudinalMeters: 50000,
-                                        longitudinalMeters: 60000)
+        backgroundMap.register(
+            ArtworkMarkerView.self,
+            forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
+        
+        let region = MKCoordinateRegion(center: userCurrentLocation.coordinate,
+                                        latitudinalMeters: 1_000,
+                                        longitudinalMeters: 1_000)
+        
         backgroundMap.setRegion(region, animated: true)
-        
         backgroundMap.isUserInteractionEnabled = true
-        backgroundMap.setCameraZoomRange(zoomRange, animated: false)
-        
-        let foodTruckOne = Annotation(title: "King David Kalakaua",
-                                      locationName: "Waikiki Gateway Park",
-                                      discipline: "Sculpture",
-                                      coordinate: CLLocationCoordinate2D(latitude: 37.549295,
-                                                                         longitude: -122.4194155))
-        
-        let foodTruckTwo = Annotation(title: "",
-                                      locationName: "",
-                                      discipline: "",
-                                      coordinate: CLLocationCoordinate2D(latitude: 37.549295,
-                                                                         longitude: -122.4194155))
-        backgroundMap.addAnnotation(foodTruckOne)
-        backgroundMap.addAnnotation(foodTruckTwo)
+        backgroundMap.showsUserLocation = true
+        backgroundMap.tintColor = Colors.orange
     }
     
     func setUpUserInterface() {
@@ -68,30 +66,158 @@ class LogInViewController: UIViewController {
         passwordTextField.tintColor = Colors.orange
         
         // Sign Up / Sign In Button
-        signUpSignInButton.setTitle("Sign Up", for: .normal)
+        signUpSignInButton.setTitle("Login", for: .normal)
         signUpSignInButton.tintColor = Colors.white
         signUpSignInButton.backgroundColor = Colors.orange
         signUpSignInButton.layer.cornerRadius = 5
         
         // Segmented Control
-        signUpSignInSegmentedControl.setTitle("Sign Up", forSegmentAt: 0)
-        signUpSignInSegmentedControl.setTitle("Login", forSegmentAt: 1)
-        signUpSignInSegmentedControl.selectedSegmentTintColor = Colors.orange
+        signUpLoginSegmentedControl.setTitle("Login", forSegmentAt: 0)
+        signUpLoginSegmentedControl.setTitle("Sign Up", forSegmentAt: 1)
+        signUpLoginSegmentedControl.selectedSegmentTintColor = Colors.orange
         let segmentedControltitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        signUpSignInSegmentedControl.setTitleTextAttributes(segmentedControltitleTextAttributes, for: .selected)
+        signUpLoginSegmentedControl.setTitleTextAttributes(segmentedControltitleTextAttributes, for: .selected)
         
     }
     
-    @IBAction func signUpSignInSegmentedControlChanged(_ sender: UISegmentedControl) {
+    func zoomOut() {
+        UIView.animate(withDuration: 2) {
+            let region = MKCoordinateRegion(center: self.userCurrentLocation.coordinate,
+                                            latitudinalMeters: 30_000,
+                                            longitudinalMeters: 30_000)
+            self.backgroundMap.setRegion(region, animated: true)
+        }
+    }
+    
+    func zoomIn() {
+        UIView.animate(withDuration: 2) {
+            let region = MKCoordinateRegion(center: self.userCurrentLocation.coordinate,
+                                        latitudinalMeters: 1_000,
+                                        longitudinalMeters: 1_000)
+            self.backgroundMap.setRegion(region, animated: true)
+        }
+    }
+    
+    // Determine Current Location
+    func determineMyCurrentLocation() {
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestAlwaysAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.startUpdatingLocation()
+            locationManager.startUpdatingHeading()
+        }
+    }
+    
+    // Location manager to set userLocation, center, and region
+    func locationManager(_ manager: CLLocationManager,
+                         didUpdateLocations locations: [CLLocation]) {
+        
+        // Set userLocation
+        let userLocation: CLLocation = locations[0] as CLLocation
+        
+        // Set center
+        let center = CLLocationCoordinate2D(latitude: userLocation.coordinate.latitude,
+                                            longitude: userLocation.coordinate.longitude)
+        
+        // Set region attritbutes
+        let region = MKCoordinateRegion(center: center,
+                                        latitudinalMeters: 30_000,
+                                        longitudinalMeters: 30_000)
+        // Set region on mapview
+        self.backgroundMap.setRegion(region,
+                               animated: true)
+        
+        // Stops updating the current location
+        manager.stopUpdatingLocation()
+        // Set coordinates to userCurrentLocation
+        userCurrentLocation = CLLocation(latitude: userLocation.coordinate.latitude,
+                                         longitude: userLocation.coordinate.longitude)
+        
+        userLatitude = userLocation.coordinate.latitude
+        userLongitude = userLocation.coordinate.longitude
+        print("lattttt: \(userLatitude)")
+        
+        let foodTruckOne = Artwork(title: "Taco Stand",
+                                   locationName: "Gateway Park",
+                                   discipline: "Open",
+                                   coordinate: CLLocationCoordinate2D(latitude: userLatitude - 0.08,
+                                                                      longitude: userLongitude + 0.08))
+        
+        let foodTruckTwo = Artwork(title: "Korean BBQ",
+                                   locationName: "North Trail Lane",
+                                   discipline: "Open",
+                                   coordinate: CLLocationCoordinate2D(latitude: userLatitude + 0.1,
+                                                                         longitude: userLongitude - 0.05))
+        
+        let foodTruckThree = Artwork(title: "Aaron's Fried Chicken",
+                                     locationName: "Town Center",
+                                     discipline: "Open",
+                                     coordinate: CLLocationCoordinate2D(latitude: userLatitude - 0.01,
+                                                                      longitude: userLongitude + 0.1))
+        let foodTruckFour = Artwork(title: "Pizza Truck",
+                                    locationName: "Cherry Blossom Lane",
+                                    discipline: "Closed",
+                                    coordinate: CLLocationCoordinate2D(latitude: userLatitude - 0.04,
+                                                                       longitude: userLongitude + 0.03))
+        let foodTruckFive = Artwork(title: "Sushi 2 Go",
+                                    locationName: "Wandering Pines",
+                                    discipline: "Open",
+                                    coordinate: CLLocationCoordinate2D(latitude: userLatitude - 0.04,
+                                           longitude: userLongitude - 0.03))
+        
+        func addAnnotationsToMap() {
+            let annotations: [MKAnnotation] = [foodTruckOne, foodTruckTwo, foodTruckThree, foodTruckFour, foodTruckFive]
+            
+            for annotation in annotations {
+                backgroundMap.addAnnotation(annotation)
+            }
+        }
+        
+        addAnnotationsToMap()
+    }
+    
+    // Location manager failed
+    func locationManager(_ manager: CLLocationManager,
+                         didFailWithError error: Error)
+    {
+        print("Error \(error)")
+    }
+    
+    
+    // MARK: IBOUTLETS
+    
+    @IBAction func signUpLoginSegmentedControlChanged(_ sender: UISegmentedControl) {
                 
-        if signUpSignInSegmentedControl.selectedSegmentIndex == 0 {
+        if signUpLoginSegmentedControl.selectedSegmentIndex == 0 {
+            print("segmented control changed to login")
+            signUpSignInButton.setTitle("Login", for: .normal)
+                signUpLoginSegmentedControl.tintColor = .purple
+            zoomOut()
+        } else {
             print("segmented control changed to sign up")
             signUpSignInButton.setTitle("Sign Up", for: .normal)
-            signUpSignInSegmentedControl.tintColor = .purple
-        } else {
-            print("segmented control changed to sign in")
-            signUpSignInButton.setTitle("Login", for: .normal)
+            zoomIn()
         }
+    }
+    
+    
+    @IBAction func signUpLoginButtonTapped(_ sender: UIButton) {
+        
+        
+        // Check segmented control
+        // Sign up or login?
+        
+        if signUpLoginSegmentedControl.selectedSegmentIndex == 0 {
+            // code for sign up
+            print("user logged in")
+        } else {
+            // code for login
+            print("user signed in")
+        }
+        
     }
     
 }
