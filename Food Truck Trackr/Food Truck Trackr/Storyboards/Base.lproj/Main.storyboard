@@ -18,18 +18,76 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="lqL-Eh-e7J">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                             </mapView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Bn-hj-WXO">
+                                <rect key="frame" x="100" y="244" width="214" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food Truck Trackr" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kXp-Zn-Q4h">
+                                <rect key="frame" x="0.0" y="44" width="414" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="nef-qF-eea"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="42"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lay-nU-fSz">
+                                <rect key="frame" x="100" y="308" width="214" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bf4-rJ-jca">
+                                <rect key="frame" x="157" y="362" width="100" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="git-av-N3j"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7M8-El-66U">
+                                <rect key="frame" x="132" y="801" width="150" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="lsu-OD-FCb"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <connections>
+                                    <action selector="signUpSignInSegmentedControlChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="JXm-7L-6zX"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="lay-nU-fSz" firstAttribute="top" secondItem="5Bn-hj-WXO" secondAttribute="bottom" constant="30" id="1wv-6W-0sQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lqL-Eh-e7J" secondAttribute="bottom" id="4d3-gY-9Qy"/>
+                            <constraint firstItem="kXp-Zn-Q4h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8Cu-Ou-N3w"/>
+                            <constraint firstItem="5Bn-hj-WXO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="9aQ-Yb-awH"/>
+                            <constraint firstItem="lay-nU-fSz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="BOV-eo-S38"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lqL-Eh-e7J" secondAttribute="trailing" id="HHY-n4-1SY"/>
+                            <constraint firstItem="Bf4-rJ-jca" firstAttribute="centerX" secondItem="lqL-Eh-e7J" secondAttribute="centerX" id="HiB-QE-I1v"/>
+                            <constraint firstItem="Bf4-rJ-jca" firstAttribute="top" secondItem="lay-nU-fSz" secondAttribute="bottom" constant="20" id="M0l-Aj-RYr"/>
                             <constraint firstItem="lqL-Eh-e7J" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="NXn-v1-eCW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5Bn-hj-WXO" secondAttribute="trailing" constant="100" id="QKk-hD-31C"/>
+                            <constraint firstItem="kXp-Zn-Q4h" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="RjJ-3f-ZrE"/>
                             <constraint firstItem="lqL-Eh-e7J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZJH-Y3-iqc"/>
+                            <constraint firstItem="5Bn-hj-WXO" firstAttribute="top" secondItem="kXp-Zn-Q4h" secondAttribute="bottom" constant="100" id="egh-P0-rvo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7M8-El-66U" secondAttribute="bottom" constant="30" id="fyT-dt-49t"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kXp-Zn-Q4h" secondAttribute="trailing" id="jmb-zF-wNF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lay-nU-fSz" secondAttribute="trailing" constant="100" id="oZA-50-pzc"/>
+                            <constraint firstItem="7M8-El-66U" firstAttribute="centerX" secondItem="Bf4-rJ-jca" secondAttribute="centerX" id="wte-5d-R9V"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="backgroundMap" destination="lqL-Eh-e7J" id="ndW-tv-wVC"/>
+                        <outlet property="passwordTextField" destination="lay-nU-fSz" id="m2u-me-Xy7"/>
+                        <outlet property="signUpSignInButton" destination="Bf4-rJ-jca" id="fR4-fn-Rw2"/>
+                        <outlet property="signUpSignInSegmentedControl" destination="7M8-El-66U" id="sEc-BR-q2Q"/>
+                        <outlet property="titleLabel" destination="kXp-Zn-Q4h" id="HHt-8Q-vFg"/>
+                        <outlet property="usernameTextField" destination="5Bn-hj-WXO" id="ecD-Mr-Qup"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
