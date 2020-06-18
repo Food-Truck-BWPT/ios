@@ -14,7 +14,8 @@
 		EDF8C0B7249B0B17002C56E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDF8C0B6249B0B17002C56E0 /* Assets.xcassets */; };
 		EDF8C0BA249B0B17002C56E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDF8C0B8249B0B17002C56E0 /* LaunchScreen.storyboard */; };
 		EDF8C0C6249B0FB4002C56E0 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF8C0C5249B0FB4002C56E0 /* Colors.swift */; };
-		EDF8C0C8249B1647002C56E0 /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF8C0C7249B1647002C56E0 /* Annotation.swift */; };
+		EDF8C0C8249B1647002C56E0 /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF8C0C7249B1647002C56E0 /* Artwork.swift */; };
+		EDF8C0CA249B1DE9002C56E0 /* ArtworkViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF8C0C9249B1DE9002C56E0 /* ArtworkViews.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +28,8 @@
 		EDF8C0B9249B0B17002C56E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EDF8C0BB249B0B17002C56E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDF8C0C5249B0FB4002C56E0 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
-		EDF8C0C7249B1647002C56E0 /* Annotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
+		EDF8C0C7249B1647002C56E0 /* Artwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
+		EDF8C0C9249B1DE9002C56E0 /* ArtworkViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkViews.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +85,8 @@
 		EDF8C0C2249B0BB2002C56E0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				EDF8C0C7249B1647002C56E0 /* Annotation.swift */,
+				EDF8C0C7249B1647002C56E0 /* Artwork.swift */,
+				EDF8C0C9249B1DE9002C56E0 /* ArtworkViews.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -176,9 +179,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDF8C0C8249B1647002C56E0 /* Annotation.swift in Sources */,
+				EDF8C0C8249B1647002C56E0 /* Artwork.swift in Sources */,
 				EDF8C0B2249B0B16002C56E0 /* LogInViewController.swift in Sources */,
 				EDF8C0C6249B0FB4002C56E0 /* Colors.swift in Sources */,
+				EDF8C0CA249B1DE9002C56E0 /* ArtworkViews.swift in Sources */,
 				EDF8C0AE249B0B16002C56E0 /* AppDelegate.swift in Sources */,
 				EDF8C0B0249B0B16002C56E0 /* SceneDelegate.swift in Sources */,
 			);
