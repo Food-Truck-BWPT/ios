@@ -1,5 +1,5 @@
 //
-//  LogInViewController.swift
+//  DinerLogInViewController.swift
 //  Food Truck Trackr
 //
 //  Created by Thomas Dye on 6/17/20.
@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class LogInViewController: UIViewController, CLLocationManagerDelegate {
+class OperatorLogInViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet weak var backgroundMap: MKMapView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -17,6 +17,7 @@ class LogInViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signUpLoginSegmentedControl: UISegmentedControl!
     @IBOutlet weak var signUpSignInButton: UIButton!
+    @IBOutlet weak var operatorButton: UIButton?
     
     var locationManager: CLLocationManager!
     
@@ -71,6 +72,8 @@ class LogInViewController: UIViewController, CLLocationManagerDelegate {
         signUpSignInButton.backgroundColor = Colors.orange
         signUpSignInButton.layer.cornerRadius = 5
         
+        // Operator Button
+        operatorButton?.setTitle("Login As Operator", for: .normal)
         // Segmented Control
         signUpLoginSegmentedControl.setTitle("Login", forSegmentAt: 0)
         signUpLoginSegmentedControl.setTitle("Sign Up", forSegmentAt: 1)
@@ -194,11 +197,13 @@ class LogInViewController: UIViewController, CLLocationManagerDelegate {
         if signUpLoginSegmentedControl.selectedSegmentIndex == 0 {
             print("segmented control changed to login")
             signUpSignInButton.setTitle("Login", for: .normal)
-                signUpLoginSegmentedControl.tintColor = .purple
+            operatorButton?.setTitle("Login As Operator", for: .normal)
+            signUpLoginSegmentedControl.tintColor = .purple
             zoomOut()
         } else {
             print("segmented control changed to sign up")
             signUpSignInButton.setTitle("Sign Up", for: .normal)
+            operatorButton?.setTitle("Sign Up As Operator", for: .normal)
             zoomIn()
         }
     }

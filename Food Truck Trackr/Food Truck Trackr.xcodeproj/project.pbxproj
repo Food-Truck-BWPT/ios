@@ -10,9 +10,10 @@
 		1B0F13CB249C53E300A3CB3D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0F13CA249C53E300A3CB3D /* User.swift */; };
 		1B0F13CD249C53EA00A3CB3D /* Bearer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0F13CC249C53EA00A3CB3D /* Bearer.swift */; };
 		1B0F13D0249C540200A3CB3D /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0F13CF249C540200A3CB3D /* UserController.swift */; };
+		EDDA00EC24A199BE00DB3531 /* OperatorLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDA00EB24A199BE00DB3531 /* OperatorLoginViewController.swift */; };
 		EDF8C0AE249B0B16002C56E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF8C0AD249B0B16002C56E0 /* AppDelegate.swift */; };
 		EDF8C0B0249B0B16002C56E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF8C0AF249B0B16002C56E0 /* SceneDelegate.swift */; };
-		EDF8C0B2249B0B16002C56E0 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF8C0B1249B0B16002C56E0 /* LogInViewController.swift */; };
+		EDF8C0B2249B0B16002C56E0 /* DinerLogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF8C0B1249B0B16002C56E0 /* DinerLogInViewController.swift */; };
 		EDF8C0B5249B0B16002C56E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDF8C0B3249B0B16002C56E0 /* Main.storyboard */; };
 		EDF8C0B7249B0B17002C56E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDF8C0B6249B0B17002C56E0 /* Assets.xcassets */; };
 		EDF8C0BA249B0B17002C56E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDF8C0B8249B0B17002C56E0 /* LaunchScreen.storyboard */; };
@@ -25,10 +26,11 @@
 		1B0F13CA249C53E300A3CB3D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		1B0F13CC249C53EA00A3CB3D /* Bearer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bearer.swift; sourceTree = "<group>"; };
 		1B0F13CF249C540200A3CB3D /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
+		EDDA00EB24A199BE00DB3531 /* OperatorLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorLoginViewController.swift; sourceTree = "<group>"; };
 		EDF8C0AA249B0B16002C56E0 /* Food Truck Trackr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Food Truck Trackr.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDF8C0AD249B0B16002C56E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDF8C0AF249B0B16002C56E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EDF8C0B1249B0B16002C56E0 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		EDF8C0B1249B0B16002C56E0 /* DinerLogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinerLogInViewController.swift; sourceTree = "<group>"; };
 		EDF8C0B4249B0B16002C56E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EDF8C0B6249B0B17002C56E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDF8C0B9249B0B17002C56E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -83,7 +85,6 @@
 				EDF8C0C1249B0BAC002C56E0 /* View Controllers */,
 				EDF8C0AD249B0B16002C56E0 /* AppDelegate.swift */,
 				EDF8C0AF249B0B16002C56E0 /* SceneDelegate.swift */,
-				EDF8C0B1249B0B16002C56E0 /* LogInViewController.swift */,
 				EDF8C0B6249B0B17002C56E0 /* Assets.xcassets */,
 				EDF8C0BB249B0B17002C56E0 /* Info.plist */,
 			);
@@ -93,6 +94,8 @@
 		EDF8C0C1249B0BAC002C56E0 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				EDF8C0B1249B0B16002C56E0 /* DinerLogInViewController.swift */,
+				EDDA00EB24A199BE00DB3531 /* OperatorLoginViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -199,9 +202,10 @@
 				1B0F13D0249C540200A3CB3D /* UserController.swift in Sources */,
 				1B0F13CD249C53EA00A3CB3D /* Bearer.swift in Sources */,
 				EDF8C0C8249B1647002C56E0 /* Artwork.swift in Sources */,
-				EDF8C0B2249B0B16002C56E0 /* LogInViewController.swift in Sources */,
+				EDF8C0B2249B0B16002C56E0 /* DinerLogInViewController.swift in Sources */,
 				EDF8C0C6249B0FB4002C56E0 /* Colors.swift in Sources */,
 				EDF8C0CA249B1DE9002C56E0 /* ArtworkViews.swift in Sources */,
+				EDDA00EC24A199BE00DB3531 /* OperatorLoginViewController.swift in Sources */,
 				EDF8C0AE249B0B16002C56E0 /* AppDelegate.swift in Sources */,
 				EDF8C0B0249B0B16002C56E0 /* SceneDelegate.swift in Sources */,
 				1B0F13CB249C53E300A3CB3D /* User.swift in Sources */,
