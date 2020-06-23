@@ -11,6 +11,24 @@
 		1B0F13CD249C53EA00A3CB3D /* Bearer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0F13CC249C53EA00A3CB3D /* Bearer.swift */; };
 		1B0F13D0249C540200A3CB3D /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0F13CF249C540200A3CB3D /* UserController.swift */; };
 		EDDA00EC24A199BE00DB3531 /* OperatorLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDA00EB24A199BE00DB3531 /* OperatorLoginViewController.swift */; };
+		EDDA00EE24A1A5D500DB3531 /* Truck.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDA00ED24A1A5D500DB3531 /* Truck.swift */; };
+		EDDA00F024A1A73500DB3531 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDA00EF24A1A73500DB3531 /* MenuItem.swift */; };
+		EDDA00F224A1A83800DB3531 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDA00F124A1A83800DB3531 /* Location.swift */; };
+		EDDA00F424A1A90F00DB3531 /* Diner.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDA00F324A1A90F00DB3531 /* Diner.swift */; };
+		EDDA00F624A1A94700DB3531 /* Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDA00F524A1A94700DB3531 /* Operator.swift */; };
+		EDDA00F824A2BB8C00DB3531 /* SearchTrucksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDA00F724A2BB8C00DB3531 /* SearchTrucksViewController.swift */; };
+		EDDA00FB24A2BBE500DB3531 /* SearchTrucksTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDA00FA24A2BBE500DB3531 /* SearchTrucksTableView.swift */; };
+		EDDA00FD24A2BC1700DB3531 /* MenuItemsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDA00FC24A2BC1700DB3531 /* MenuItemsTableView.swift */; };
+		EDDA00FF24A2BC3F00DB3531 /* SelectedTruckDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDA00FE24A2BC3F00DB3531 /* SelectedTruckDetailViewController.swift */; };
+		EDDA010124A2BC6100DB3531 /* MenuItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDA010024A2BC6100DB3531 /* MenuItemDetailViewController.swift */; };
+		EDDA010324A2BCAB00DB3531 /* MyTrucksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDA010224A2BCAA00DB3531 /* MyTrucksTableViewController.swift */; };
+		EDDA010524A2BD0F00DB3531 /* AddTruckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDA010424A2BD0F00DB3531 /* AddTruckViewController.swift */; };
+		EDDA010724A2BD6200DB3531 /* AddMenuItemToNewTruckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDA010624A2BD6200DB3531 /* AddMenuItemToNewTruckViewController.swift */; };
+		EDDA010924A2BDA600DB3531 /* AddTruckMenuTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDA010824A2BDA600DB3531 /* AddTruckMenuTableView.swift */; };
+		EDDA010B24A2BDCD00DB3531 /* EditTruckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDA010A24A2BDCD00DB3531 /* EditTruckViewController.swift */; };
+		EDDA010D24A2BDEA00DB3531 /* EditTruckMenuTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDA010C24A2BDEA00DB3531 /* EditTruckMenuTableView.swift */; };
+		EDDA010F24A2BE2E00DB3531 /* AddMenuItemToExistingTruckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDA010E24A2BE2E00DB3531 /* AddMenuItemToExistingTruckViewController.swift */; };
+		EDDA011124A2BE5600DB3531 /* EditMenuItemForExistingTruckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDA011024A2BE5600DB3531 /* EditMenuItemForExistingTruckViewController.swift */; };
 		EDF8C0AE249B0B16002C56E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF8C0AD249B0B16002C56E0 /* AppDelegate.swift */; };
 		EDF8C0B0249B0B16002C56E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF8C0AF249B0B16002C56E0 /* SceneDelegate.swift */; };
 		EDF8C0B2249B0B16002C56E0 /* DinerLogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF8C0B1249B0B16002C56E0 /* DinerLogInViewController.swift */; };
@@ -27,6 +45,24 @@
 		1B0F13CC249C53EA00A3CB3D /* Bearer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bearer.swift; sourceTree = "<group>"; };
 		1B0F13CF249C540200A3CB3D /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		EDDA00EB24A199BE00DB3531 /* OperatorLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorLoginViewController.swift; sourceTree = "<group>"; };
+		EDDA00ED24A1A5D500DB3531 /* Truck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Truck.swift; sourceTree = "<group>"; };
+		EDDA00EF24A1A73500DB3531 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		EDDA00F124A1A83800DB3531 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		EDDA00F324A1A90F00DB3531 /* Diner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diner.swift; sourceTree = "<group>"; };
+		EDDA00F524A1A94700DB3531 /* Operator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operator.swift; sourceTree = "<group>"; };
+		EDDA00F724A2BB8C00DB3531 /* SearchTrucksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTrucksViewController.swift; sourceTree = "<group>"; };
+		EDDA00FA24A2BBE500DB3531 /* SearchTrucksTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTrucksTableView.swift; sourceTree = "<group>"; };
+		EDDA00FC24A2BC1700DB3531 /* MenuItemsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemsTableView.swift; sourceTree = "<group>"; };
+		EDDA00FE24A2BC3F00DB3531 /* SelectedTruckDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedTruckDetailViewController.swift; sourceTree = "<group>"; };
+		EDDA010024A2BC6100DB3531 /* MenuItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemDetailViewController.swift; sourceTree = "<group>"; };
+		EDDA010224A2BCAA00DB3531 /* MyTrucksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTrucksTableViewController.swift; sourceTree = "<group>"; };
+		EDDA010424A2BD0F00DB3531 /* AddTruckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTruckViewController.swift; sourceTree = "<group>"; };
+		EDDA010624A2BD6200DB3531 /* AddMenuItemToNewTruckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMenuItemToNewTruckViewController.swift; sourceTree = "<group>"; };
+		EDDA010824A2BDA600DB3531 /* AddTruckMenuTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTruckMenuTableView.swift; sourceTree = "<group>"; };
+		EDDA010A24A2BDCD00DB3531 /* EditTruckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTruckViewController.swift; sourceTree = "<group>"; };
+		EDDA010C24A2BDEA00DB3531 /* EditTruckMenuTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTruckMenuTableView.swift; sourceTree = "<group>"; };
+		EDDA010E24A2BE2E00DB3531 /* AddMenuItemToExistingTruckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMenuItemToExistingTruckViewController.swift; sourceTree = "<group>"; };
+		EDDA011024A2BE5600DB3531 /* EditMenuItemForExistingTruckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMenuItemForExistingTruckViewController.swift; sourceTree = "<group>"; };
 		EDF8C0AA249B0B16002C56E0 /* Food Truck Trackr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Food Truck Trackr.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDF8C0AD249B0B16002C56E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDF8C0AF249B0B16002C56E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,12 +87,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1B0F13CE249C53EF00A3CB3D /* ModelControllers */ = {
+		1B0F13CE249C53EF00A3CB3D /* Model Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				1B0F13CF249C540200A3CB3D /* UserController.swift */,
 			);
-			path = ModelControllers;
+			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		EDDA00F924A2BBC400DB3531 /* Table Views */ = {
+			isa = PBXGroup;
+			children = (
+				EDDA00FA24A2BBE500DB3531 /* SearchTrucksTableView.swift */,
+				EDDA00FC24A2BC1700DB3531 /* MenuItemsTableView.swift */,
+				EDDA010824A2BDA600DB3531 /* AddTruckMenuTableView.swift */,
+				EDDA010C24A2BDEA00DB3531 /* EditTruckMenuTableView.swift */,
+			);
+			path = "Table Views";
 			sourceTree = "<group>";
 		};
 		EDF8C0A1249B0B16002C56E0 = {
@@ -81,7 +128,8 @@
 				EDF8C0C4249B0BC0002C56E0 /* Storyboards */,
 				EDF8C0C3249B0BB6002C56E0 /* Helpers */,
 				EDF8C0C2249B0BB2002C56E0 /* Models */,
-				1B0F13CE249C53EF00A3CB3D /* ModelControllers */,
+				1B0F13CE249C53EF00A3CB3D /* Model Controllers */,
+				EDDA00F924A2BBC400DB3531 /* Table Views */,
 				EDF8C0C1249B0BAC002C56E0 /* View Controllers */,
 				EDF8C0AD249B0B16002C56E0 /* AppDelegate.swift */,
 				EDF8C0AF249B0B16002C56E0 /* SceneDelegate.swift */,
@@ -96,6 +144,15 @@
 			children = (
 				EDF8C0B1249B0B16002C56E0 /* DinerLogInViewController.swift */,
 				EDDA00EB24A199BE00DB3531 /* OperatorLoginViewController.swift */,
+				EDDA00F724A2BB8C00DB3531 /* SearchTrucksViewController.swift */,
+				EDDA00FE24A2BC3F00DB3531 /* SelectedTruckDetailViewController.swift */,
+				EDDA010024A2BC6100DB3531 /* MenuItemDetailViewController.swift */,
+				EDDA010224A2BCAA00DB3531 /* MyTrucksTableViewController.swift */,
+				EDDA010424A2BD0F00DB3531 /* AddTruckViewController.swift */,
+				EDDA010624A2BD6200DB3531 /* AddMenuItemToNewTruckViewController.swift */,
+				EDDA010A24A2BDCD00DB3531 /* EditTruckViewController.swift */,
+				EDDA010E24A2BE2E00DB3531 /* AddMenuItemToExistingTruckViewController.swift */,
+				EDDA011024A2BE5600DB3531 /* EditMenuItemForExistingTruckViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -107,6 +164,11 @@
 				EDF8C0C9249B1DE9002C56E0 /* ArtworkViews.swift */,
 				1B0F13CA249C53E300A3CB3D /* User.swift */,
 				1B0F13CC249C53EA00A3CB3D /* Bearer.swift */,
+				EDDA00ED24A1A5D500DB3531 /* Truck.swift */,
+				EDDA00EF24A1A73500DB3531 /* MenuItem.swift */,
+				EDDA00F124A1A83800DB3531 /* Location.swift */,
+				EDDA00F324A1A90F00DB3531 /* Diner.swift */,
+				EDDA00F524A1A94700DB3531 /* Operator.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -199,15 +261,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDDA010924A2BDA600DB3531 /* AddTruckMenuTableView.swift in Sources */,
 				1B0F13D0249C540200A3CB3D /* UserController.swift in Sources */,
 				1B0F13CD249C53EA00A3CB3D /* Bearer.swift in Sources */,
 				EDF8C0C8249B1647002C56E0 /* Artwork.swift in Sources */,
 				EDF8C0B2249B0B16002C56E0 /* DinerLogInViewController.swift in Sources */,
+				EDDA010724A2BD6200DB3531 /* AddMenuItemToNewTruckViewController.swift in Sources */,
 				EDF8C0C6249B0FB4002C56E0 /* Colors.swift in Sources */,
+				EDDA00EE24A1A5D500DB3531 /* Truck.swift in Sources */,
+				EDDA00F224A1A83800DB3531 /* Location.swift in Sources */,
+				EDDA00F624A1A94700DB3531 /* Operator.swift in Sources */,
+				EDDA00F824A2BB8C00DB3531 /* SearchTrucksViewController.swift in Sources */,
+				EDDA010324A2BCAB00DB3531 /* MyTrucksTableViewController.swift in Sources */,
 				EDF8C0CA249B1DE9002C56E0 /* ArtworkViews.swift in Sources */,
+				EDDA010524A2BD0F00DB3531 /* AddTruckViewController.swift in Sources */,
+				EDDA00F424A1A90F00DB3531 /* Diner.swift in Sources */,
+				EDDA00FB24A2BBE500DB3531 /* SearchTrucksTableView.swift in Sources */,
 				EDDA00EC24A199BE00DB3531 /* OperatorLoginViewController.swift in Sources */,
+				EDDA00FD24A2BC1700DB3531 /* MenuItemsTableView.swift in Sources */,
+				EDDA010D24A2BDEA00DB3531 /* EditTruckMenuTableView.swift in Sources */,
+				EDDA011124A2BE5600DB3531 /* EditMenuItemForExistingTruckViewController.swift in Sources */,
 				EDF8C0AE249B0B16002C56E0 /* AppDelegate.swift in Sources */,
+				EDDA010B24A2BDCD00DB3531 /* EditTruckViewController.swift in Sources */,
+				EDDA010124A2BC6100DB3531 /* MenuItemDetailViewController.swift in Sources */,
+				EDDA00F024A1A73500DB3531 /* MenuItem.swift in Sources */,
+				EDDA00FF24A2BC3F00DB3531 /* SelectedTruckDetailViewController.swift in Sources */,
 				EDF8C0B0249B0B16002C56E0 /* SceneDelegate.swift in Sources */,
+				EDDA010F24A2BE2E00DB3531 /* AddMenuItemToExistingTruckViewController.swift in Sources */,
 				1B0F13CB249C53E300A3CB3D /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
