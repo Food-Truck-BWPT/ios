@@ -166,12 +166,28 @@
                                 <rect key="frame" x="0.0" y="410" width="414" height="486"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="15j-I7-oAa">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TruckCell" textLabel="UKa-3r-xRg" detailTextLabel="COG-K2-WBG" style="IBUITableViewCellStyleValue1" id="15j-I7-oAa">
                                         <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="15j-I7-oAa" id="2h5-F0-Obf">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UKa-3r-xRg">
+                                                    <rect key="frame" x="20" y="12" width="33.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="COG-K2-WBG">
+                                                    <rect key="frame" x="350" y="12" width="44" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="LMg-xI-3pe" kind="show" id="ka0-cG-Gz8"/>
@@ -196,6 +212,10 @@
                         <viewLayoutGuide key="safeArea" id="QbW-Vs-576"/>
                     </view>
                     <navigationItem key="navigationItem" title="Food Truck Trackr" id="hTS-ty-sSc"/>
+                    <connections>
+                        <outlet property="searchTrucksMapView" destination="5yW-Gx-4Vk" id="9wE-ts-Zvy"/>
+                        <outlet property="searchTrucksTableView" destination="h4B-mY-hbc" id="XZL-V1-qR8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H5g-bU-fDC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -228,7 +248,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="My Trucks" id="ATH-XA-4o0">
-                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="RGQ-3F-YZm">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="RGQ-3F-YZm">
                             <connections>
                                 <segue destination="l16-7F-F34" kind="show" id="mDV-R3-QKl"/>
                             </connections>
@@ -1170,7 +1190,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ZaS-KW-oQH"/>
         <segue reference="XN1-R3-6a7"/>
     </inferredMetricsTieBreakers>
 </document>
