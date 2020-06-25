@@ -212,6 +212,12 @@ class DinerLogInViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBAction func signUpLoginButtonTapped(_ sender: UIButton) {
         
+        // Programmatic segue set-up
+        guard let username = usernameTextField.text,
+            let password = passwordTextField.text,
+            !username.isEmpty,
+            !password.isEmpty
+            else { return } // Set up an alert controller to tell the user to enter stuff.
         
         // Check segmented control
         // Sign up or login?
@@ -222,8 +228,11 @@ class DinerLogInViewController: UIViewController, CLLocationManagerDelegate {
         } else {
             // code for login
             print("user signed in")
+            
         }
         
+        // Actual Programmatic segue
+        performSegue(withIdentifier: "SegueName", sender: self) // Make an actual segue and give it an identifier
     }
     
 }
